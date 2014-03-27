@@ -1,0 +1,10 @@
+---
+layout: post
+date: 2014-03-27 15:04:47
+title: Title
+categories: blog
+tags: slide
+slideImage: 
+---
+
+{% include image.html src="1.jpg" %}
