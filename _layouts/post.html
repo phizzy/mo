@@ -1,0 +1,12 @@
+---
+layout: default
+title: Post
+---
+
+<div class="slide row">
+    {% for post in site.post %}
+        {{ post.title }}
+        {{ content }}
+    {% endfor %}
+</div>
+
