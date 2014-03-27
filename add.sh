@@ -9,6 +9,7 @@ fi
 if [ -f "_posts/$1.markdown" ]
 then
     echo "文章$1重名"
+    exit 1
 fi
 
 mkdir -p "images/$1/"
