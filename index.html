@@ -3,6 +3,9 @@ layout: default
 title: Home
 ---
 <div>
+    {% for post in site.tags.slide limit:5 %}
+        <img src="post.slideImage" />
+    {% endfor %}
     {% for post in site.posts %}
         <a href=".{{ post.url }}">{{ post.title }}</a>
         {{ post.content }}
