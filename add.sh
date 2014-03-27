@@ -14,4 +14,5 @@ fi
 
 mkdir -p "images/$1/"
 
-touch _posts/"$1".markdown
+now=`date '+%Y-%m-%d %H:%M:%S'`
+echo "---\nlayout: post\ndate: $now\ntitle: "Title"\ncategories: blog\ntags: slide\nslideImage: \n---" > _posts/"$1".markdown
