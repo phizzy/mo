@@ -4,4 +4,4 @@ pygments: true
 paginate: 5
 
 baseurl: /mo/
-permalink: /mo/:year/:month/:day/:title.html
+permalink: /:year/:month/:day/:title.html
