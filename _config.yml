@@ -3,4 +3,4 @@ markdown: redcarpet
 pygments: true
 paginate: 5
 
-permalink: /:year/:month/:day/:title.html
+permalink: /mo/:year/:month/:day/:title.html
