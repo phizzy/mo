@@ -1,0 +1,54 @@
+#!/bin/sh
+
+if [ $# -lt 1 ]
+then
+    echo "新增数据类型，如post或者timestone"
+    exit 1
+fi
+
+current=`date '+%Y-%m-%d'`
+
+# 添加timestone data
+if [ $1 = 'timestone' ]
+then
+    file='_data/timestone.yml'
+    echo "请输入时间点，如：2013-06-09；默认为今天"
+    read myTime
+    if [ -n $myTime ]
+    then
+        myTime=$current
+    fi
+    echo "请输入摘要信息"
+    read myExcerpt
+    echo "- time: $myTime\n  excerpt: $myExcerpt\n" >> $file
+fi
+
+# 添加post
+if [ $1 = 'post' ]
+then
+    if [ $# -lt 2 ]
+    then
+        echo "请输入post name"
+        exit 1
+    fi
+    echo $2 | grep -q '^[0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\}'
+
+    if [ $? -eq 0 ]
+    then
+        file="$2"
+    else
+        file="$current"-"$2"
+    fi
+
+    if [ -f "_posts/$file.markdown" ]
+    then
+        echo "文章$file重名"
+        exit 1
+    fi
+
+    mkdir -p "images/$file/"
+
+
+    now=`date '+%Y-%m-%d %H:%M:%S'`
+    echo "---\nlayout: post\npostname: $file\ndate: $now\ntitle: "Title"\ncategories: blog\ntags: slide\nslideImage: \n---" > _posts/"$file".markdown
+fi
