@@ -6,13 +6,24 @@ then
     exit 1
 fi
 
-if [ -f "_posts/$1.markdown" ]
+current=`date '+%Y-%m-%d'`
+echo $1 | grep -q '^[0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\}'
+
+if [ $? -eq 0 ]
 then
-    echo "文章$1重名"
+    file="$1"
+else
+    file="$current"-"$1"
+fi
+
+if [ -f "_posts/$file.markdown" ]
+then
+    echo "文章$file重名"
     exit 1
 fi
 
-mkdir -p "images/$1/"
+mkdir -p "images/$file/"
+
 
 now=`date '+%Y-%m-%d %H:%M:%S'`
-echo "---\nlayout: post\ndate: $now\ntitle: "Title"\ncategories: blog\ntags: slide\nslideImage: \n---" > _posts/"$1".markdown
+echo "---\nlayout: post\ndate: $now\ntitle: "Title"\ncategories: blog\ntags: slide\nslideImage: \n---" > _posts/"$file".markdown
