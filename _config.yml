@@ -2,3 +2,5 @@ name: 墨宝的成长日记
 markdown: redcarpet
 pygments: true
 paginate: 5
+
+permalink: none
