@@ -3,5 +3,5 @@ markdown: redcarpet
 pygments: true
 paginate: 5
 
-baseurl: /mo/
+url: /mo/
 permalink: /:year/:month/:day/:title.html
