@@ -1,0 +1,13 @@
+---
+layout: post
+postname: 2013-06-09-hello
+date: 2014-03-27 15:30:13
+title: Hello World!
+categories: blog
+tags: slide
+slideImage: 
+---
+
+2013年6月9日6点3分，无边天际传来一声炸雷，直炸的天摇地晃、山崩海裂。伴随着这震动天地的巨响，朱墨，诞生了。
+
+{% include image.html src="1.png" %}
