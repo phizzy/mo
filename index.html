@@ -5,8 +5,7 @@ title: Home
 
 <div>
     {% for post in site.posts %}
-        {{ post.url }}
-        {{ post.title }}
-        {{ content }}
+        <a href="{{ post.url }}">{{ post.title }}</a>
+        {{ post.content }}
     {% endfor %}
 </div>
