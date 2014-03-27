@@ -20,6 +20,7 @@ then
     fi
     echo "请输入摘要信息"
     read myExcerpt
+    mkdir -p "images/timestome/$myTime/"
     echo "- time: $myTime\n  excerpt: $myExcerpt\n" >> $file
 fi
 
@@ -46,8 +47,7 @@ then
         exit 1
     fi
 
-    mkdir -p "images/$file/"
-
+    mkdir -p "images/post/$file/"
 
     now=`date '+%Y-%m-%d %H:%M:%S'`
     echo "---\nlayout: post\npostname: $file\ndate: $now\ntitle: "Title"\ncategories: blog\ntags: slide\nslideImage: \n---" > _posts/"$file".markdown

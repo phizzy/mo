@@ -2,14 +2,4 @@
 layout: default
 title: Home
 ---
-<div>
-    {% for post in site.posts limit:0 %}
-        <a href=".{{ post.url }}">{{ post.title }}</a>
-        {{ post.content }}
-    {% endfor %}
 
-    {% for ts in site.data.timestone %}
-        {{ tt.time}}
-        {{ tt.excerpt }}
-    {% endfor %}
-</div>
