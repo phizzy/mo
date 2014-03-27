@@ -26,4 +26,4 @@ mkdir -p "images/$file/"
 
 
 now=`date '+%Y-%m-%d %H:%M:%S'`
-echo "---\nlayout: post\ndate: $now\ntitle: "Title"\ncategories: blog\ntags: slide\nslideImage: \n---" > _posts/"$file".markdown
+echo "---\nlayout: post\nfilename: $file\ndate: $now\ntitle: "Title"\ncategories: blog\ntags: slide\nslideImage: \n---" > _posts/"$file".markdown
