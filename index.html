@@ -1,13 +1,11 @@
 ---
 layout: default
 title: Home
-weight: 1
-hasNoSide: 1
 ---
 
-<div class="slide row">
-    {% for iSlide in site.tags.slide limit:5 %}
-    <img src="{{ iSlide.slideImage }}" />
-    {{ iSlide.slideTitle }}
+<div>
+    {% for post in site.post %}
+        {{ post.title }}
+        {{ content }}
     {% endfor %}
 </div>
