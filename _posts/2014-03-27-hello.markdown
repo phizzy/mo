@@ -1,6 +1,6 @@
 ---
 layout: post
-filename: 2014-03-27-hello
+postname: 2014-03-27-hello
 date: 2014-03-27 15:04:47
 title: Title
 categories: blog
