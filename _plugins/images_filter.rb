@@ -4,7 +4,7 @@ module Jekyll
     module ImagesFilter
 
         def fillimage(raw, ext = "")
-            "<img src='/images/{raw}' {ext}/>"
+            return "<img src='/images/{raw}' />"
         end
     end
 end
