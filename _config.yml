@@ -3,5 +3,6 @@ markdown: redcarpet
 pygments: true
 paginate: 5
 
-relative_permalinks: false
+destination: ./_site/mo
+
 permalink: /mo/:year/:month/:day/:title.html
